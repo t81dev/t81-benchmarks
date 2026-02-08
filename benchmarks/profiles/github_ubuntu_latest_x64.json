@@ -1,0 +1,13 @@
+{
+  "profile_id": "github-ubuntu-latest-x64",
+  "class": "cpu",
+  "os": "Ubuntu",
+  "arch": "x86_64",
+  "runner": "github-hosted ubuntu-latest",
+  "cpu_features": [
+    "avx2"
+  ],
+  "threads": 2,
+  "memory_gb": 7,
+  "notes": "Ephemeral CI profile for regression detection; compare trends, not absolute maxima."
+}
