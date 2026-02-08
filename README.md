@@ -52,5 +52,6 @@ Snapshot date: `2026-02-08`.
 ## Next Expansion
 
 1. Implement metric extraction for the `llm_inference_t3k_vs_q4q5` harness.
-2. Add suite harnesses for hardware, memory, and crypto domains.
-3. Add nightly/weekly benchmark runners where environments are stable.
+2. Expand deterministic runtime suite result ingestion from `t81-vm` perf reports.
+3. Add suite harnesses for hardware, memory, and crypto domains.
+4. Add nightly/weekly benchmark runners where environments are stable.

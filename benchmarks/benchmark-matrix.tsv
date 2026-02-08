@@ -3,7 +3,7 @@ ternary	llm	llm_inference_t3k_vs_q4q5	tokens_per_sec;peak_rss_mb;wikitext2_ppl;m
 t81lib	llm	llm_kernel_perf	tokens_per_sec;matmul_latency_ms;throughput_ops	in_progress	Packed ternary kernels and Python/C++ bindings.
 t81-python	tooling	python_quantization_pipeline	export_time_s;pack_ratio;round_trip_integrity	planned	HF/llama.cpp integration workflows.
 llama.cpp	baseline	llama_cpp_reference_baseline	tokens_per_sec;peak_rss_mb;load_time_s	planned	Fork baseline used as comparator.
-t81-foundation	runtime	deterministic_runtime_bench	ops_per_sec;trace_size_mb;determinism_replay_pass	planned	Deterministic VM/runtime and reproducibility.
+t81-vm	runtime	deterministic_runtime_bench	instructions_per_sec;state_hash_match;determinism_replay_pass	active	Backed by t81-vm perf baseline contract and CI regression gate.
 t81-hardware	hardware	rtl_emulator_parity	parity_pass_rate;sim_cycles;vector_coverage	in_progress	RTL + emulator parity and regression speed.
 ternary-fabric	hardware	fabric_offload_reference	latency_ms;energy_proxy;offload_hit_rate	planned	Fabric interception and offload experiments.
 ternary-memory-research	memory	sense_headroom_energy	headroom_mv;latency_ps;energy_pj_word	active	Noise/driver/phase sweep based guard ledger.

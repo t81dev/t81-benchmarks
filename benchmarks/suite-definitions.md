@@ -36,7 +36,10 @@ This document defines the benchmark suites listed in `benchmarks/benchmark-matri
 
 - `deterministic_runtime_bench`
   Deterministic runtime replay and trace generation throughput.
-  Required outputs: execution throughput, replay parity, trace footprint.
+  Required outputs: execution throughput, replay parity, state hash parity.
+  Baseline source:
+  - `t81-vm/docs/benchmarks/vm-perf-baseline.json`
+  - `t81-vm/scripts/perf-regression-check.py`
 
 - `rtl_emulator_parity`
   Compare hardware simulation outputs with software emulator traces.
