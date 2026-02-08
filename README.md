@@ -22,6 +22,7 @@ This repository tracks comparable evidence for:
 - `benchmarks/results/schema.json`: canonical schema for benchmark output files.
 - `benchmarks/results/`: suite output artifacts (JSON).
 - `docs/ecosystem/`: generated GitHub ecosystem snapshot and inventory.
+- `docs/publication-cadence.md`: monthly benchmark publication policy and checklist.
 - `scripts/sync-ecosystem.sh`: refreshes repository metadata from the GitHub API.
 - `scripts/validate-benchmark-matrix.sh`: sanity checks matrix integrity.
 - `scripts/validate-results.sh`: schema/profile validation for benchmark result artifacts.
@@ -54,4 +55,4 @@ Snapshot date: `2026-02-08`.
 1. Implement metric extraction for the `llm_inference_t3k_vs_q4q5` harness.
 2. Expand deterministic runtime suite result ingestion from `t81-vm` perf reports.
 3. Add suite harnesses for hardware, memory, and crypto domains.
-4. Add nightly/weekly benchmark runners where environments are stable.
+4. Execute monthly publication cadence (see `docs/publication-cadence.md`).

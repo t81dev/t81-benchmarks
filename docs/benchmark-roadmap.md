@@ -46,3 +46,4 @@ Deliverables:
 - Every benchmark row must map to a source repository and suite contract.
 - Metrics without reproducible harness configuration are considered informational, not authoritative.
 - Repository metadata snapshots should be refreshed before adding or removing benchmark targets.
+- Monthly publication cadence follows `docs/publication-cadence.md`.
