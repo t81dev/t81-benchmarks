@@ -23,12 +23,14 @@ This repository tracks comparable evidence for:
 - `benchmarks/results/`: suite output artifacts (JSON).
 - `docs/ecosystem/`: generated GitHub ecosystem snapshot and inventory.
 - `docs/publication-cadence.md`: monthly benchmark publication policy and checklist.
+- `publications/YYYY-MM/README.md`: monthly evidence bundle anchored to release manifest pins.
 - `scripts/sync-ecosystem.sh`: refreshes repository metadata from the GitHub API.
 - `scripts/validate-benchmark-matrix.sh`: sanity checks matrix integrity.
 - `scripts/validate-results.sh`: schema/profile validation for benchmark result artifacts.
 - `scripts/test-llm-parser.sh`: fixture-backed parser sanity test for the LLM suite runner.
 - `scripts/test-llm-parser-failure.sh`: fixture-backed negative-path test for parser failure handling.
 - `.github/workflows/validate.yml`: CI validation for benchmark metadata.
+- `.github/workflows/monthly-publication-bundle.yml`: scheduled monthly publication bundle generation.
 
 ## Quick Start
 

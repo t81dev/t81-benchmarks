@@ -22,6 +22,8 @@
    - `./scripts/test-llm-parser-failure.sh`
 4. Refresh ecosystem snapshot: `./scripts/sync-ecosystem.sh t81dev`.
 5. Commit updated artifacts and include publication date in commit message.
+6. Generate/update monthly publication bundle: `./scripts/generate-publication-bundle.sh`.
+7. Verify publication bundle workflow health: `.github/workflows/monthly-publication-bundle.yml`.
 
 ## Next Window
 

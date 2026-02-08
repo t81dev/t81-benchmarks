@@ -3,14 +3,16 @@ duotronic-computing	C++	main	Interpretive and contextual material exploring duot
 duotronic-thesis		main		https://github.com/t81dev/duotronic-thesis
 duotronic-whitepaper		main	A formal proposal and reference semantics for a ternary logic coprocessor that augments binary systems.	https://github.com/t81dev/duotronic-whitepaper
 llama.cpp	C++	master	LLM inference in C/C++	https://github.com/t81dev/llama.cpp
-t81-benchmarks		main	Rigorous comparisons: inference speed/memory/accuracy of T3_K vs Q4/Q5, simulated energy, crypto throughput, etc.	https://github.com/t81dev/t81-benchmarks
+t81-benchmarks	Shell	main	Rigorous comparisons: inference speed/memory/accuracy of T3_K vs Q4/Q5, simulated energy, crypto throughput, etc.	https://github.com/t81dev/t81-benchmarks
 t81-constraints		main	Epistemic constraints, assumptions, and failure boundaries governing the t81dev research ecosystem.	https://github.com/t81dev/t81-constraints
 t81-docs	Shell	main	Central hub with architecture overviews, installation guides, API references, visual explainers of balanced ternary, migration paths from binary, and a unified "getting started" for the whole stack.	https://github.com/t81dev/t81-docs
-t81-examples		main	Curated demo	https://github.com/t81dev/t81-examples
+t81-examples	Shell	main	Curated demo	https://github.com/t81dev/t81-examples
 t81-foundation	C++	main	 T81 Ecosystem: a deterministic, ternary-native computing stack featuring base-81 data types, the TISC instruction set, T81VM, T81Lang, Axion safety/optimization, and the full recursive cognition tiers.	https://github.com/t81dev/t81-foundation
 t81-hardware	SystemVerilog	main	Verilog/VHDL simulations, testbenches, FPGA targeting scripts, or even a software emulator of the ternary co-processor.	https://github.com/t81dev/t81-hardware
+t81-lang	C++	main	T81Lang: the deterministic, balanced-ternary domain-specific language for the T81 ecosystem. Compiles to TISC IR and bytecode for HanoiVM execution with Axion safety guarantees.	https://github.com/t81dev/t81-lang
 t81-python	Python	main	High-level Python package on PyPI with clean APIs, type hints, and integration examples (e.g., with Hugging Face or llama.cpp Python bindings).	https://github.com/t81dev/t81-python
 t81-roadmap	Shell	main	Public vision document, milestone tracking, contribution guidelines, and discussion of bigger picture (e.g., ternary-native ASICs, integration with quantum ideas, AGI implications).	https://github.com/t81dev/t81-roadmap
+t81-vm	C++	main	T81VM (HanoiVM): Deterministic, balanced-ternary native virtual machine. Executes TISC bytecode with full reproducibility, Axion safety guarantees, and overflow protection. Core runtime for the T81 ternary computing stack.	https://github.com/t81dev/t81-vm
 t81lib	C++	main	t81lib – Balanced-ternary quantization and arithmetic core for AI and quant workloads in modern C++ and Python.	https://github.com/t81dev/t81lib
 ternary	C++	main	Ternary Quantization for LLMs: Implement balanced ternary (T3_K) weights for 2.63-bit quantization—the first working solution for modern large language models.	https://github.com/t81dev/ternary
 ternary-delta		main	What ternary changes, what it doesn’t, and why now.	https://github.com/t81dev/ternary-delta

@@ -1,0 +1,58 @@
+name: Monthly Benchmark Publication Bundle
+
+on:
+  schedule:
+    - cron: "20 14 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout t81-benchmarks
+        uses: actions/checkout@v4
+        with:
+          path: t81-benchmarks
+
+      - name: Checkout t81-roadmap
+        uses: actions/checkout@v4
+        with:
+          repository: t81dev/t81-roadmap
+          path: t81-roadmap
+          ref: main
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install jsonschema
+
+      - name: Run publication validations
+        working-directory: t81-benchmarks
+        run: |
+          ./scripts/validate-benchmark-matrix.sh
+          ./scripts/validate-results.sh
+          ./scripts/test-llm-parser.sh
+          ./scripts/test-llm-parser-failure.sh
+          ./scripts/sync-ecosystem.sh t81dev
+
+      - name: Generate publication bundle
+        working-directory: t81-benchmarks
+        env:
+          T81_ROADMAP_DIR: ${{ github.workspace }}/t81-roadmap
+        run: ./scripts/generate-publication-bundle.sh
+
+      - name: Commit and push publication bundle
+        working-directory: t81-benchmarks
+        run: |
+          if git diff --quiet -- publications docs/ecosystem; then
+            echo "No publication bundle changes detected."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add publications docs/ecosystem
+          git commit -m "chore(benchmarks): publish monthly evidence bundle"
+          git push origin HEAD:main
