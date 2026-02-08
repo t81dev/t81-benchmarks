@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://t81dev.github.io/t81-benchmarks/benchmarks/results/schema.json",
+  "title": "t81-benchmarks result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "run_id",
+    "suite",
+    "timestamp_utc",
+    "git_commit",
+    "profile_id",
+    "inputs",
+    "metrics",
+    "outcome"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.0\\.0$"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 6,
+      "maxLength": 128,
+      "pattern": "^[a-zA-Z0-9._:-]+$"
+    },
+    "suite": {
+      "type": "string",
+      "minLength": 3
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "git_commit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{7,40}$"
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "inputs": {
+      "type": "object",
+      "required": ["workload"],
+      "properties": {
+        "workload": { "type": "string" },
+        "dataset": {
+          "type": "object",
+          "properties": {
+            "name": { "type": "string" },
+            "split": { "type": "string" },
+            "samples": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": true
+        },
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label", "format", "quantization"],
+            "properties": {
+              "label": { "type": "string" },
+              "format": { "type": "string" },
+              "quantization": { "type": "string" },
+              "reference": { "type": "string" },
+              "size_gb": { "type": ["number", "null"], "minimum": 0 }
+            },
+            "additionalProperties": true
+          }
+        },
+        "runtime": {
+          "type": "object",
+          "properties": {
+            "binary": { "type": "string" },
+            "threads": { "type": "integer", "minimum": 1 },
+            "ctx_size": { "type": "integer", "minimum": 1 },
+            "max_tokens": { "type": "integer", "minimum": 1 }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "metrics": {
+      "type": "object",
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-z0-9_]+$": {
+          "type": ["number", "null"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "outcome": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": ["completed", "failed", "dry_run"]
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}

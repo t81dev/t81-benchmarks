@@ -1,0 +1,1 @@
+llama_perf_context_print:        eval time =    3450.00 ms /   250 runs   (   13.80 ms per token,    72.46 tokens per second)

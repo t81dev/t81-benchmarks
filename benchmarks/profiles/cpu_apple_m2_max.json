@@ -1,0 +1,10 @@
+{
+  "profile_id": "cpu_apple_m2_max",
+  "class": "cpu",
+  "os": "macOS",
+  "arch": "arm64",
+  "cpu": "Apple M2 Max",
+  "threads": 12,
+  "memory_gb": 32,
+  "notes": "Use fixed power mode and no background training jobs during benchmark runs."
+}

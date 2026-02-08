@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0.0",
+  "run_id": "llm_inference_t3k_vs_q4q5_sample_2026-02-08",
+  "suite": "llm_inference_t3k_vs_q4q5",
+  "timestamp_utc": "2026-02-08T18:00:00Z",
+  "git_commit": "0000000000000000000000000000000000000000",
+  "profile_id": "cpu_apple_m2_max",
+  "inputs": {
+    "workload": "single_prompt_generation",
+    "dataset": {
+      "name": "wikitext-2-raw-v1",
+      "split": "validation",
+      "samples": 128
+    },
+    "models": [
+      {
+        "label": "gemma-2-2b-it-q4_k_m",
+        "format": "gguf",
+        "quantization": "Q4_K_M",
+        "reference": "local://models/gemma-2-2b-it-q4_k_m.gguf",
+        "size_gb": 2.8
+      },
+      {
+        "label": "gemma-2-2b-it-t3_k",
+        "format": "gguf",
+        "quantization": "T3_K",
+        "reference": "local://models/gemma-2-2b-it-t3_k.gguf",
+        "size_gb": 2.4
+      }
+    ],
+    "runtime": {
+      "binary": "llama-cli",
+      "threads": 8,
+      "ctx_size": 4096,
+      "max_tokens": 256
+    }
+  },
+  "metrics": {
+    "tokens_per_sec_q4_k_m": 72.2,
+    "tokens_per_sec_t3_k": 75.1,
+    "peak_rss_mb_q4_k_m": 3560,
+    "peak_rss_mb_t3_k": 3312,
+    "wikitext2_ppl_q4_k_m": 6.48,
+    "wikitext2_ppl_t3_k": 6.38,
+    "model_size_gb_q4_k_m": 2.8,
+    "model_size_gb_t3_k": 2.4
+  },
+  "outcome": {
+    "status": "dry_run",
+    "notes": "Seed sample for schema and pipeline validation; replace with measured values from harness runs."
+  }
+}

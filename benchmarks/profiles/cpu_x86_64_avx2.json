@@ -1,0 +1,10 @@
+{
+  "profile_id": "cpu_x86_64_avx2",
+  "class": "cpu",
+  "os": "Linux",
+  "arch": "x86_64",
+  "cpu_features": ["avx2", "fma"],
+  "threads": 16,
+  "memory_gb": 64,
+  "notes": "Pin process affinity where possible and disable turbo scaling for repeatability."
+}

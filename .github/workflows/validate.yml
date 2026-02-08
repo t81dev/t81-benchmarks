@@ -1,0 +1,35 @@
+name: Validate Benchmark Metadata
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install jq
+        run: sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Install Python dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install jsonschema
+
+      - name: Validate benchmark matrix
+        run: ./scripts/validate-benchmark-matrix.sh
+
+      - name: Validate benchmark results
+        run: ./scripts/validate-results.sh
+
+      - name: Parser sanity test
+        run: ./scripts/test-llm-parser.sh
+
+      - name: Parser failure-path test
+        run: ./scripts/test-llm-parser-failure.sh
+
+      - name: Sync ecosystem snapshot
+        run: ./scripts/sync-ecosystem.sh t81dev
