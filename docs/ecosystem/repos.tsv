@@ -7,7 +7,7 @@ t81-benchmarks	Shell	main	Rigorous comparisons: inference speed/memory/accuracy 
 t81-constraints		main	Epistemic constraints, assumptions, and failure boundaries governing the t81dev research ecosystem.	https://github.com/t81dev/t81-constraints
 t81-docs	Shell	main	Central hub with architecture overviews, installation guides, API references, visual explainers of balanced ternary, migration paths from binary, and a unified "getting started" for the whole stack.	https://github.com/t81dev/t81-docs
 t81-examples	Shell	main	Curated demo	https://github.com/t81dev/t81-examples
-t81-foundation	C++	main	 T81 Ecosystem: a deterministic, ternary-native computing stack featuring base-81 data types, the TISC instruction set, T81VM, T81Lang, Axion safety/optimization, and the full recursive cognition tiers.	https://github.com/t81dev/t81-foundation
+t81-foundation	C++	main	T81 is a unified, deterministic, ternary-native computational architecture designed to surpass the limitations of binary computation. 	https://github.com/t81dev/t81-foundation
 t81-hardware	SystemVerilog	main	Verilog/VHDL simulations, testbenches, FPGA targeting scripts, or even a software emulator of the ternary co-processor.	https://github.com/t81dev/t81-hardware
 t81-lang	C++	main	T81Lang: the deterministic, balanced-ternary domain-specific language for the T81 ecosystem. Compiles to TISC IR and bytecode for HanoiVM execution with Axion safety guarantees.	https://github.com/t81dev/t81-lang
 t81-python	Python	main	High-level Python package on PyPI with clean APIs, type hints, and integration examples (e.g., with Hugging Face or llama.cpp Python bindings).	https://github.com/t81dev/t81-python

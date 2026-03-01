@@ -1,7 +1,7 @@
 # Benchmark Publication Bundle (2026-03)
 
-- Snapshot time (UTC): 2026-02-08T23:35:35Z
-- t81-benchmarks commit: `5608c53810634b10afb45352e581a3aa9dfadf5a`
+- Snapshot time (UTC): 2026-03-01T14:43:45Z
+- t81-benchmarks commit: `880d8acefc718a318a25760aa9e499adb3622727`
 - Benchmark matrix SHA256: `7be2de4825e60e840b0128d6c66b5127f95b1f950269c4cf07d7c233ad02b484`
 - Result artifact count: `3`
 - Ecosystem manifest: `2026-02-08-v5` / vm pin `4158a42156a085a2b722205be951576fc01969b9`
