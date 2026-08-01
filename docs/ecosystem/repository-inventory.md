@@ -2,13 +2,14 @@
 
 Organization: `t81dev`
 
-Snapshot date (UTC): `2026-07-01`
+Snapshot date (UTC): `2026-08-01`
 
-Repository count: `26`
+Repository count: `27`
 
 | Repo | Language | Default Branch | Description |
 |---|---|---|---|
 | [ANGELA](https://github.com/t81dev/ANGELA) | Python | main | - |
+| [digital-archaeology](https://github.com/t81dev/digital-archaeology) | - | main | A map of computing's unrealized possibilities—a place where historical artifacts are examined not just for what they were, but for what they might still become. |
 | [duotronic-computing](https://github.com/t81dev/duotronic-computing) | C++ | main | Interpretive and contextual material exploring duotronic computing and the Ternary Logic Unit (TLU). This repository is non-normative and depends on the formal specification at t81dev/duotroic-whitepaper. |
 | [duotronic-thesis](https://github.com/t81dev/duotronic-thesis) | - | main | - |
 | [duotronic-whitepaper](https://github.com/t81dev/duotronic-whitepaper) | - | main | A formal proposal and reference semantics for a ternary logic coprocessor that augments binary systems. |
