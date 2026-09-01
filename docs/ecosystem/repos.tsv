@@ -1,5 +1,5 @@
 ANGELA	Python	main		https://github.com/t81dev/ANGELA
-digital-archaeology		main	A map of computing's unrealized possibilities—a place where historical artifacts are examined not just for what they were, but for what they might still become.	https://github.com/t81dev/digital-archaeology
+digital-archaeology	Python	main	A map of computing's unrealized possibilities—a place where historical artifacts are examined not just for what they were, but for what they might still become.	https://github.com/t81dev/digital-archaeology
 duotronic-computing	C++	main	Interpretive and contextual material exploring duotronic computing and the Ternary Logic Unit (TLU). This repository is non-normative and depends on the formal specification at t81dev/duotroic-whitepaper.	https://github.com/t81dev/duotronic-computing
 duotronic-thesis		main		https://github.com/t81dev/duotronic-thesis
 duotronic-whitepaper		main	A formal proposal and reference semantics for a ternary logic coprocessor that augments binary systems.	https://github.com/t81dev/duotronic-whitepaper
